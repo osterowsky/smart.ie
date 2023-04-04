@@ -96,6 +96,9 @@
   }
 }
 @media(max-width: 767px) {
+  .navbar-pasted-image {
+    transform: scale(0.5);
+  }
   .navbar-navbar {
     padding-bottom: var(--dl-space-space-fourunits);
   }

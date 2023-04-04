@@ -134,6 +134,7 @@
   line-height: 24px;
   letter-spacing: 2px;
   text-transform: uppercase;
+  text-align: center;
 }
 .section-heading {
   color: rgb(255, 255, 255);
@@ -142,6 +143,7 @@
   font-family: Poppins;
   font-weight: 600;
   line-height: 48px;
+  text-align: center;
 }
 .section-description {
   color: rgb(204, 204, 204);

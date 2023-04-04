@@ -170,6 +170,7 @@
   justify-content: center;
 }
 .home-section03 {
+  text-align: center;
   color: #4FD74F;
 }
 .home-heading03 {
@@ -561,6 +562,7 @@
   background-color: #4FD74F;
 }
 .home-text07 {
+  text-align: center;
   color: rgb(12, 16, 12);
   font-size: 16px;
   font-style: normal;
@@ -568,6 +570,10 @@
   font-weight: 500;
   line-height: 24px;
 }
+.home-text10 {
+  text-align: center;
+}
+
 .home-features {
   gap: var(--dl-space-space-unit);
   display: flex;
@@ -1174,17 +1180,36 @@
 }
 @media(max-width: 991px) {
   .navbar-root-class-name {
+    height: 20vh;
     position: relative;
   }
   .home-section {
     position: relative;
     display: flex;
-    height: auto;
+    height: calc(100vw / 1.777); /* adjust this value based on the aspect ratio of your video */
     justify-content: center;
     align-items: center;
     overflow: hidden;
     padding-left: 0px;
     padding-right: 0px;
+  }
+  .home-pasted-video {
+    object-fit: contain;
+  }
+  .home-pasted-image {
+    width: 70%;
+    height: auto;
+    margin-right: 0;
+  }
+  .home-pasted-image1 {
+    width: 70%;
+    height: auto;
+    margin-right: 0;
+  }
+  .home-pasted-image2 {
+    width: 70%;
+    height: auto;
+    margin-right: 0;
   }
   .home-heading {
     text-align: center;
