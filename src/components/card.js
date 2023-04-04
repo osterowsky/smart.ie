@@ -29,7 +29,7 @@ Card.defaultProps = {
   IconAlt: 'image',
   image_alt: 'image',
   Header: 'Patryk Ostern',
-  image_src1: '/playground_assets/fotor_2023-3-30_22_35_1-200h.png',
+  image_src1: '/playground_assets/patryk.png',
   image_alt1: 'image',
 }
 
