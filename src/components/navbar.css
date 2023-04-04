@@ -1,0 +1,104 @@
+.navbar-navbar {
+  width: var(--dl-size-size-maxwidth);
+  display: flex;
+  z-index: 1000;
+  position: relative;
+  max-width: 1200px;
+  align-self: auto;
+  align-items: center;
+  flex-shrink: 1;
+  padding-top: var(--dl-space-space-twounits);
+  padding-left: var(--dl-space-space-oneandhalfunits);
+  align-content: space-around;
+  padding-right: var(--dl-space-space-oneandhalfunits);
+  padding-bottom: var(--dl-space-space-twounits);
+}
+
+.navbar-root-class-name {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.navbar-container {
+  flex: 0 0 auto;
+  width: auto;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+.navbar-navlink {
+  display: contents;
+}
+.navbar-pasted-image {
+  width: 100%;
+  height: 206px;
+  text-decoration: none;
+}
+.navbar-nav-content {
+  gap: var(--dl-space-space-threeunits);
+  display: flex;
+  flex-wrap: wrap;
+  align-self: center;
+  align-items: stretch;
+  padding-left: var(--dl-space-space-sixunits);
+  flex-direction: row;
+  justify-content: flex-end;
+}
+.navbar-nav-links {
+  gap: var(--dl-space-space-threeunits);
+  width: auto;
+  display: flex;
+  border-color: transparent;
+}
+.navbar-link {
+  color: #ffffff;
+  font-size: 28px;
+  font-style: normal;
+  font-family: Montserrat;
+  font-weight: 800;
+  text-decoration: none;
+}
+.navbar-link1 {
+  color: #ffffff;
+  font-size: 28px;
+  font-style: normal;
+  font-family: Montserrat;
+  font-weight: 800;
+  text-decoration: none;
+}
+.navbar-link2 {
+  color: #ffffff;
+  font-size: 28px;
+  font-style: normal;
+  font-family: Montserrat;
+  font-weight: 800;
+  text-decoration: none;
+}
+.navbar-link3 {
+  color: #ffffff;
+  font-size: 28px;
+  font-style: normal;
+  font-family: Montserrat;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+@media(max-width: 991px) {
+  .navbar-navbar {
+    justify-content: center;
+  }
+  .navbar-nav-content {
+    display: none;
+  }
+}
+@media(max-width: 767px) {
+  .navbar-navbar {
+    padding-bottom: var(--dl-space-space-fourunits);
+  }
+  .navbar-nav-links {
+    display: none;
+  }
+}
