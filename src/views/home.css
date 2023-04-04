@@ -1180,7 +1180,7 @@
 }
 @media(max-width: 991px) {
   .navbar-root-class-name {
-    height: 20vh;
+    height: 30vh;
     position: relative;
   }
   .home-section {
@@ -1289,6 +1289,13 @@
   }
 }
 @media(max-width: 767px) {
+  .home-pasted-video {
+    display: none;
+  }
+  .home-section {
+    display: none;
+  }
+
   .home-section01 {
     gap: var(--dl-space-space-fourunits);
     padding-bottom: var(--dl-space-space-twounits);
