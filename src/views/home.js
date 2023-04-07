@@ -33,7 +33,7 @@ const Home = (props) => {
           <div className="home-image">
             <img
               alt="pastedImage"
-              src="/playground_assets/listy.svg"
+              src="/playground_assets/oferty.png"
               className="home-pasted-image"
             />
           </div>
@@ -70,7 +70,7 @@ const Home = (props) => {
           <div className="home-image1">
             <img
               alt="pastedImage"
-              src="/playground_assets/oferty.svg"
+              src="/playground_assets/oferty.png"
               className="home-pasted-image1"
             />
           </div>
