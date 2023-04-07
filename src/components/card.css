@@ -21,9 +21,10 @@
   width: 100px;
   align-self: center;
   object-fit: cover;
+  filter: grayscale(100%);
 }
 .card-header {
-  color: rgb(255, 255, 255);
+  color: #4CC366;
   font-size: 24px;
   align-self: center;
   font-style: normal;

@@ -365,7 +365,7 @@ const Home = (props) => {
             <p className="home-paragraph4 section-description">
               Smart.ie to projekt stworzony przez ambitnych młodych ludzi
               wywodzących się z największego akceleratora startupowego dla
-              młodzieży
+              młodzieży w Polsce
             </p>
           </div>
         </header>
