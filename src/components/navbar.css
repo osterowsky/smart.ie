@@ -14,14 +14,6 @@
   padding-bottom: var(--dl-space-space-twounits);
 }
 
-.navbar-root-class-name {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1;
-}
-
 .navbar-container {
   flex: 0 0 auto;
   width: auto;

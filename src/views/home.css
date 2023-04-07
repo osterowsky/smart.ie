@@ -1176,10 +1176,28 @@
   font-family: Poppins;
   line-height: 21px;
 }
+
+.navbar-root-class-name {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
 @media(max-width: 991px) {
   .navbar-root-class-name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 30vh;
     position: relative;
+  }
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
   .home-section {
     position: relative;
