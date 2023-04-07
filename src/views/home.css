@@ -64,7 +64,6 @@
   justify-content: center;
 }
 .home-pasted-image {
-  width: 539px;
   height: 693px;
   margin-right: var(--dl-space-space-oneandhalfunits);
 }
@@ -216,7 +215,6 @@
   justify-content: center;
 }
 .home-pasted-image2 {
-  width: 539px;
   height: 693px;
   margin-right: var(--dl-space-space-oneandhalfunits);
 }
