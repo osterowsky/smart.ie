@@ -508,6 +508,18 @@ const Home = (props) => {
                       className="home-linked-in1 social"
                     />
                   </a>
+                  <a
+                    href="https://www.instagram.com/smart.ie/"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    className="home-link2"
+                  >
+                    <img
+                      alt="image"
+                      src="/playground_assets/instagram.png"
+                      className="home-linked-in1 social"
+                    />
+                  </a>
                 </div>
               </header>
               <header className="home-categories">
