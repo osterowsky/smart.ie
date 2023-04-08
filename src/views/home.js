@@ -472,7 +472,7 @@ const Home = (props) => {
                 </div>
                 <div className="home-socials">
                   <a
-                    href="https://facebook.com"
+                    href="https://www.facebook.com/profile.php?id=100091242044447"
                     target="_blank"
                     rel="noreferrer noopener"
                     className="home-link"
@@ -485,7 +485,7 @@ const Home = (props) => {
                     </svg>
                   </a>
                   <a
-                    href="https://example.com"
+                    href="https://www.linkedin.com/company/smart-ie/about/"
                     target="_blank"
                     rel="noreferrer noopener"
                     className="home-link1"
@@ -497,7 +497,7 @@ const Home = (props) => {
                     />
                   </a>
                   <a
-                    href="https://example.com"
+                    href="https://www.tiktok.com/@smart.ie_pl"
                     target="_blank"
                     rel="noreferrer noopener"
                     className="home-link2"
