@@ -1,6 +1,13 @@
 const axios = require('axios');
+require('dotenv').config();
+
+const apiKey = process.env.SENDINBLUE_API;
 
 exports.handler = async function(event, context) {
+  if (!apiKey) {
+    return { statusCode: 500, body: "API Key is empty"}
+  }
+  
   if (event.httpMethod !== 'POST') {
     return { statusCode: 405, body: 'Method Not Allowed' };
   }
@@ -16,7 +23,7 @@ exports.handler = async function(event, context) {
       {
         headers: {
           'Content-Type': 'application/json',
-          'api-key': "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" // use your actual API key from Netlify environment variables
+          'api-key': apiKey // use your actual API key from Netlify environment variables
         }
       }
     );
@@ -29,7 +36,7 @@ exports.handler = async function(event, context) {
     } else {
       return {
         statusCode: response.status,
-        body: JSON.stringify({ success: false, message: 'Subscription failed weirdly' })
+        body: JSON.stringify({ success: false, message: 'Subscription failed' })
       };
     }
 
@@ -38,7 +45,7 @@ exports.handler = async function(event, context) {
 
     return {
       statusCode: 500,
-      body: JSON.stringify({ success: false, message: 'Subscription failed' })
+      body: JSON.stringify({ success: false, message: 'Subscription failed :(' })
     };
   }
 };
