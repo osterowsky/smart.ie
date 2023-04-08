@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 import DangerousHTML from 'dangerous-html/react'
 import { Helmet } from 'react-helmet'
@@ -13,6 +13,31 @@ import Card from '../components/card'
 import './home.css'
 
 const Home = (props) => {
+
+    const [email, setEmail] = useState('');
+    const handleClick = () => {
+      fetch('/api/subscribe', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ email })
+      })
+      .then(response => response.json())
+      .then(data => {
+        setEmail('');
+        if (data.success) {
+          setStatus('Success');
+        } else {
+          setStatus('Failed');
+        }
+      })
+      .catch(error => {
+        console.error(error)
+        setStatus('Failed')
+      });
+    };
+
   return (
     <div className="home-container">
       <Helmet>
@@ -535,8 +560,10 @@ const Home = (props) => {
                   placeholder="Podaj swoj email"
                   autoComplete="off"
                   className="home-textinput input"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
                 />
-                <div className="home-buy2 button">
+                <div className="home-buy2 button" onClick={handleClick}>
                   <span className="home-text40">-&gt;</span>
                   <span className="home-text41">Dołącz już teraz!</span>
                 </div>
