@@ -15,8 +15,18 @@ import './home.css'
 const Home = (props) => {
 
     const [email, setEmail] = useState('');
+
+    const validateEmail = (email) => {
+      const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      return re.test(email);
+    };
     const handleClick = () => {
-      fetch('/api/subscribe', {
+
+      if (!validateEmail(email)) {
+        setEmail('');
+        return;
+      }
+      fetch('/.netlify/functions/server', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -26,15 +36,9 @@ const Home = (props) => {
       .then(response => response.json())
       .then(data => {
         setEmail('');
-        if (data.success) {
-          setStatus('Success');
-        } else {
-          setStatus('Failed');
-        }
       })
       .catch(error => {
         console.error(error)
-        setStatus('Failed')
       });
     };
 

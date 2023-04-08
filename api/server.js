@@ -1,45 +1,44 @@
-const express = require('express');
-const cors = require('cors');
-const bodyParser = require('body-parser');
 const axios = require('axios');
-require('dotenv').config();
 
+exports.handler = async function(event, context) {
+  if (event.httpMethod !== 'POST') {
+    return { statusCode: 405, body: 'Method Not Allowed' };
+  }
 
-const app = express();
-
-app.use(cors());
-app.use(bodyParser.json());
-
-app.post('/api/subscribe', (req, res) => {
-
-  console.log('Received a request!');
-  const { email } = req.body;
-
-  // Call Sendinblue API to subscribe user to your mailing list
-  axios.post('https://api.sendinblue.com/v3/contacts', {
-    email,
-    listIds: [3] // replace with your actual list ID
-  }, {
-    headers: {
-      'Content-Type': 'application/json',
-      'api-key': process.env.SENDINBLUE_API // replace with your actual API key
+  const { email } = JSON.parse(event.body);
+  try {
+    const response = await axios.post(
+      'https://api.sendinblue.com/v3/contacts',
+      {
+        email,
+        listIds: [3] // replace with your actual list ID
+      },
+      {
+        headers: {
+          'Content-Type': 'application/json',
+          'api-key': "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" // use your actual API key from Netlify environment variables
+        }
+      }
+    );
+    
+    if (response.status === 201) {
+      return {
+        statusCode: 200,
+        body: JSON.stringify({ success: true, message: 'Subscription successful' })
+      };
+    } else {
+      return {
+        statusCode: response.status,
+        body: JSON.stringify({ success: false, message: 'Subscription failed weirdly' })
+      };
     }
-  })
-  .then(response => {
-    console.log(response.data);
-    res.send({ success: true });
-  })
-  .catch(error => {
+
+  } catch (error) {
     console.error(error);
-    res.status(500).send({ success: false, message: 'Failed to subscribe' });
-  });
-});
 
-app.listen(3001, () => {
-  console.log('Server listening on port 3001!');
-});
-
-
-
-
-
+    return {
+      statusCode: 500,
+      body: JSON.stringify({ success: false, message: 'Subscription failed' })
+    };
+  }
+};
