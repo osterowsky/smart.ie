@@ -588,7 +588,7 @@ const Home = (props) => {
             <main className="home-subscribe">
               <h1 className="home-notice">
                 Dołączając do naszej listy mailowej zgadzasz się z naszą
-                polityką prywatności
+                <a href="/polityka-prywatnosci"> polityką prywatności</a>
               </h1>
             </main>
           </div>

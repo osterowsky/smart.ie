@@ -1,0 +1,25 @@
+.polityka-section {
+    padding-bottom: 10vh;
+}
+
+
+.polityka-heading {
+    padding-left: 5vh;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+    color: rgb(255, 255, 255);
+    font-size: 40px;
+    font-style: normal;
+    font-family: Poppins;
+    font-weight: 600;
+    line-height: 48px;
+}
+
+.polityka-description {
+    padding-left: 5vh;
+    color: rgb(204, 204, 204);
+    width: 100%;
+    max-width: 90%;
+    font-family: Poppins;
+    line-height: 28px;
+  }
