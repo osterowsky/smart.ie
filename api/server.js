@@ -12,13 +12,13 @@ exports.handler = async function(event, context) {
     return { statusCode: 405, body: 'Method Not Allowed' };
   }
 
-  const { email } = JSON.parse(event.body);
+  const { email, listID } = JSON.parse(event.body);
   try {
     const response = await axios.post(
       'https://api.sendinblue.com/v3/contacts',
       {
         email,
-        listIds: [3] // replace with your actual list ID
+        listIds: listID // replace with your actual list ID
       },
       {
         headers: {

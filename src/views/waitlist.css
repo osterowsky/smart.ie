@@ -1,0 +1,147 @@
+.waitlist-form {
+  border-radius: 10px;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5vh;
+  padding: 40px;
+  background-color: transparent;
+  box-shadow: 2px 2px 6px rgba(76, 195, 102, 1);
+  font-family: 'Montserrat', sans-serif;
+}
+
+.waitlist-form-header {
+  font-size: 48px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #ffffff;
+}
+
+.waitlist-form-label {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.waitlist-form-input {
+  margin-top: 3vh;
+  font-size: 20px;
+  padding: 15px;
+  text-align: center;
+  margin-bottom: 20px;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  background-color: #292929;
+}
+
+.waitlist-text-input {
+  flex: 1;
+  color: #ffffff;
+  height: 24px;
+  line-height: 24px;
+  padding-left: var(--dl-space-space-oneandhalfunits);
+  outline-style: none;
+  background-color: rgba(217, 217, 217, 0);
+}
+
+
+.waitlist-form-button {
+  justify-content: center;
+  text-align: center;
+  margin-top: 3vh;
+  font-size: 26px;
+  border-radius: 10px;
+  color: rgb(12, 16, 12);
+  font-weight: 500;
+  font-family: Poppins;
+  cursor: pointer;
+  display: flex;
+  padding-top: var(--dl-space-space-unit);
+  padding-left: var(--dl-space-space-oneandhalfunits);
+  padding-right: var(--dl-space-space-oneandhalfunits);
+  padding-bottom: var(--dl-space-space-unit);
+  background-color: #4FD74F;
+}
+
+@media (max-width: 991px) {
+  .waitlist-form {
+    padding: 20px;
+  }
+
+  .waitlist-form-header {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+
+  .waitlist-form-label {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  .waitlist-form-input {
+    font-size: 24px;
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+
+  .waitlist-form-button {
+    font-size: 24px;
+    padding: 10px 20px;
+  }
+}
+
+@media (max-width: 767px) {
+  .waitlist-form {
+    padding: 20px;
+  }
+
+  .waitlist-form-header {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+
+  .waitlist-form-label {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  .waitlist-form-input {
+    font-size: 24px;
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+
+  .waitlist-form-button {
+    font-size: 24px;
+    padding: 10px 20px;
+  }
+}
+
+@media (max-width: 479px) {
+  .waitlist-form-header {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  .waitlist-form-label {
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+
+  .waitlist-form-input {
+    font-size: 18px;
+    padding: 5px;
+    margin-bottom: 10px;
+  }
+
+  .waitlist-form-button {
+    font-size: 18px;
+    padding: 5px 10px;
+  }
+}

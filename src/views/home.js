@@ -31,7 +31,7 @@ const Home = (props) => {
         headers: {
           'Content-Type': 'application/json'
         },
-        body: JSON.stringify({ email })
+        body: JSON.stringify({ email, listID: [3] })
       })
       .then(response => response.json())
       .then(data => {
