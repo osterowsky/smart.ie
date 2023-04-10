@@ -972,7 +972,6 @@
   width: 100%;
   font-size: 14px;
   max-width: 260px;
-  align-self: center;
   font-family: Poppins;
   line-height: 21px;
 }
@@ -982,7 +981,6 @@
   display: flex;
   align-self: flex-start;
   align-items: flex-start;
-  padding-left: 30px;
   flex-direction: row;
   justify-content: flex-start;
 }

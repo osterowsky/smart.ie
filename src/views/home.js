@@ -476,7 +476,6 @@ const Home = (props) => {
               <header className="home-main3">
                 <div className="home-header09">
                   <div className="home-container2">
-                    <span>Text</span>
                     <span className="home-text16">Smart.ie</span>
                   </div>
                   <span className="home-text17">

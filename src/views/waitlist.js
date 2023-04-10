@@ -105,19 +105,18 @@ const WaitList = (props) => {
                 <main className="home-main-content">
                     <div className="home-content6">
                     <header className="home-main3">
-                        <div className="home-header09">
+                        <div className="home-header09" style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
                         <div className="home-container2">
-                            <span>Text</span>
                             <span className="home-text16">Smart.ie</span>
                         </div>
-                        <span className="home-text17">
+                        <span className="home-text17" style={{textAlign: 'center'}}>
                             <span>Oszczędzaj bez zmiany swojego</span>
                             <br></br>
                             <span>lifestylu żywieniowego!</span>
                             <br></br>
                         </span>
                         </div>
-                        <div className="home-socials">
+                        <div className="home-socials" style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
                         <a
                             href="https://www.facebook.com/profile.php?id=100091242044447"
                             target="_blank"
@@ -170,7 +169,7 @@ const WaitList = (props) => {
                         </div>
                     </header>
                     </div>
-                    <section className="home-copyright">
+                    <section className="home-copyright" style={{textAlign: 'center'}}>
                     <span className="home-text33">
                         <span>© 2023 Smart.ie</span>
                         <br></br>
