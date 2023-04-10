@@ -71,10 +71,13 @@ const Polityka = (props) => {
                         className="navbar-logo-pasted-image"
                     />
                     </Link>
-                    <h2 className="home-heading09 section-heading " id="heading" style={{color: '#4CC366'}}>
-                        Polityka Prywatności
-                    </h2>
+                    
                 </div>
+
+
+                <h2 className="home-heading09 section-heading " id="heading" style={{color: '#4CC366'}}>
+                        Polityka Prywatności
+                </h2>
 
             <section className="polityka-section" style={{marginTop: '10vh'}}>
                  

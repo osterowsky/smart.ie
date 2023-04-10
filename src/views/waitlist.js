@@ -70,13 +70,13 @@ const WaitList = (props) => {
                         className="navbar-logo-pasted-image"
                     />
                     </Link>
-                    <h2 className="home-heading09 section-heading" id="heading">
-                        Premiera <span style={{color: '#4CC366'}}>Smart.ie</span> już 1 września 2023!
-                    </h2>
                 </div>
 
+                <h2 className="home-heading09 section-heading" id="heading">
+                        Premiera <span style={{color: '#4CC366'}}>Smart.ie</span> już 1 września 2023!
+                </h2>
                 <section className="waitlist-section" style={{marginTop: '20vh', marginBottom: '20vh', alignItems: 'center', justifyContent: 'center', display: 'flex'}}>
-                    
+
                     <div  className="waitlist-form">
                             {statusMessage && (
                             <div style={{ fontFamily: 'Montserrat', fontSize: '16px', color: statusColor, textAlign: 'center' }}>
