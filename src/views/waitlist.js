@@ -96,6 +96,12 @@ const WaitList = (props) => {
                             />
                         </div>
                         <button type="submit" className="waitlist-form-button" onClick={handleClick}>Zapisz się!</button>
+                            <main className="home-subscribe">
+                            <h1 className="home-notice">
+                                Dołączając do naszej listy oczekujących zgadzasz się z naszą
+                                <a href="/polityka-prywatnosci"> polityką prywatności</a>
+                            </h1>
+                            </main>
                     </div>
                 
                 </section>
