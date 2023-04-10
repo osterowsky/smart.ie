@@ -58,7 +58,7 @@ const WaitList = (props) => {
                     </h2>
                 </div>
 
-                <section className="waitlist-section" style={{paddingTop: '15vh', alignItems: 'center', justifyContent: 'center', display: 'flex'}}>
+                <section className="waitlist-section" style={{marginTop: '20vh', marginBottom: '20vh', alignItems: 'center', justifyContent: 'center', display: 'flex'}}>
                 
                     <div  className="waitlist-form">
                         <div className="waitlist-form-input">
