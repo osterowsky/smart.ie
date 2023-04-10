@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState} from 'react'
 
 import { Helmet } from 'react-helmet'
 import { Link } from 'react-router-dom'
@@ -9,6 +9,35 @@ import '../logonav.css'
 
 
 const Polityka = (props) => {
+
+    const [email, setEmail] = useState('');
+
+    const validateEmail = (email) => {
+      const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      return re.test(email);
+    };
+    const handleClick = () => {
+
+      if (!validateEmail(email)) {
+        setEmail('');
+        return;
+      }
+      fetch('/.netlify/functions/server', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ email, listID: [3] })
+      })
+      .then(response => response.json())
+      .then(data => {
+        setEmail('');
+      })
+      .catch(error => {
+        console.error(error)
+      });
+    };
+
     return (
         <div class="home-container-sub">
              <Helmet>
@@ -360,6 +389,129 @@ const Polityka = (props) => {
                     </ul>
                  </p>
             </section>
+
+            <footer className="home-footer">
+                <div className="home-content5">
+                <main className="home-main-content">
+                    <div className="home-content6">
+                    <header className="home-main3">
+                        <div className="home-header09">
+                        <div className="home-container2">
+                            <span>Text</span>
+                            <span className="home-text16">Smart.ie</span>
+                        </div>
+                        <span className="home-text17">
+                            <span>Oszczędzaj bez zmiany swojego</span>
+                            <br></br>
+                            <span>lifestylu żywieniowego!</span>
+                            <br></br>
+                        </span>
+                        </div>
+                        <div className="home-socials">
+                        <a
+                            href="https://www.facebook.com/profile.php?id=100091242044447"
+                            target="_blank"
+                            rel="noreferrer noopener"
+                            className="home-link"
+                        >
+                            <svg
+                            viewBox="0 0 602.2582857142856 1024"
+                            className="home-icon2"
+                            >
+                            <path d="M548 6.857v150.857h-89.714c-70.286 0-83.429 33.714-83.429 82.286v108h167.429l-22.286 169.143h-145.143v433.714h-174.857v-433.714h-145.714v-169.143h145.714v-124.571c0-144.571 88.571-223.429 217.714-223.429 61.714 0 114.857 4.571 130.286 6.857z"></path>
+                            </svg>
+                        </a>
+                        <a
+                            href="https://www.linkedin.com/company/smart-ie/about/"
+                            target="_blank"
+                            rel="noreferrer noopener"
+                            className="home-link1"
+                        >
+                            <img
+                            alt="image"
+                            src="/playground_assets/linkedin-200h.png"
+                            className="home-linked-in social"
+                            />
+                        </a>
+                        <a
+                            href="https://www.tiktok.com/@smart.ie_pl"
+                            target="_blank"
+                            rel="noreferrer noopener"
+                            className="home-link2"
+                        >
+                            <img
+                            alt="image"
+                            src="/playground_assets/tiktok-200w.png"
+                            className="home-linked-in1 social"
+                            />
+                        </a>
+                        <a
+                            href="https://www.instagram.com/smart.ie/"
+                            target="_blank"
+                            rel="noreferrer noopener"
+                            className="home-link2"
+                        >
+                            <img
+                            alt="image"
+                            src="/playground_assets/instagram.png"
+                            className="home-linked-in1 social"
+                            />
+                        </a>
+                        </div>
+                    </header>
+                    </div>
+                    <section className="home-copyright">
+                    <span className="home-text33">
+                        <span>© 2023 Smart.ie</span>
+                        <br></br>
+                    </span>
+                    </section>
+                </main>
+                <div className="home-container3">
+                    <main className="home-main4">
+                    <h1 className="home-heading15">
+                        <span>
+                        Otrzymuj cotygodniowe wskazówki dotyczące
+                        <span
+                            dangerouslySetInnerHTML={{
+                            __html: ' ',
+                            }}
+                        />
+                        </span>
+                        <br></br>
+                        <span>oszczędzania!</span>
+                        <br></br>
+                    </h1>
+                    <div className="home-input-field">
+                        <input
+                        type="email"
+                        id="inputemail"
+                        placeholder="Podaj swoj email"
+                        autoComplete="off"
+                        className="home-textinput input"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        />
+                        <div className="home-buy2 button" onClick={handleClick}>
+                        <span className="home-text40">-&gt;</span>
+                        <span className="home-text41">Dołącz już teraz!</span>
+                        </div>
+                    </div>
+                    </main>
+                    <main className="home-subscribe">
+                    <h1 className="home-notice">
+                        Dołączając do naszej listy mailowej zgadzasz się z naszą
+                        <a href="/polityka-prywatnosci"> polityką prywatności</a>
+                    </h1>
+                    </main>
+                </div>
+                <section className="home-copyright1">
+                    <span className="home-text42">
+                    © 2023 Smart.ie
+                    </span>
+                </section>
+                </div>
+            </footer>
 
 
         </div>
