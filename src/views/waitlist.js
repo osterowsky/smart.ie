@@ -10,6 +10,8 @@ import '../logonav.css'
 const WaitList = (props) => {
 
     const [email, setEmail] = useState('');
+    const [statusMessage, setStatusMessage] = useState('');
+    const [statusColor, setStatusColor] = useState('');
 
     const validateEmail = (email) => {
       const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -18,7 +20,12 @@ const WaitList = (props) => {
     const handleClick = () => {
 
       if (!validateEmail(email)) {
+        setStatusMessage('Niepoprawny e-mail. Spróbuj ponownie!');
+        setStatusColor('red');
         setEmail('');
+        setTimeout(() => {
+          setStatusMessage('');
+          }, 8000);
         return;
       }
       fetch('/.netlify/functions/server', {
@@ -30,10 +37,20 @@ const WaitList = (props) => {
       })
       .then(response => response.json())
       .then(data => {
+        setStatusMessage('Gratulacje! Jesteś oficjalnie ze Smart.ie!');
+        setStatusColor('#4CC366');
         setEmail('');
+        setTimeout(() => {
+          setStatusMessage('');
+          }, 8000);
       })
       .catch(error => {
         console.error(error)
+        setStatusMessage('Problem z e-mailem. Spróbuj inny e-mail lub ponownie później!');
+        setStatusColor('red');
+        setTimeout(() => {
+          setStatusMessage('');
+          }, 8000);
       });
     };
 
@@ -59,8 +76,13 @@ const WaitList = (props) => {
                 </div>
 
                 <section className="waitlist-section" style={{marginTop: '20vh', marginBottom: '20vh', alignItems: 'center', justifyContent: 'center', display: 'flex'}}>
-                
+                    
                     <div  className="waitlist-form">
+                            {statusMessage && (
+                            <div style={{ fontFamily: 'Montserrat', fontSize: '16px', color: statusColor, textAlign: 'center' }}>
+                            {statusMessage}
+                            </div>
+                            )}
                         <div className="waitlist-form-input">
                             <input 
                                 type="email" 

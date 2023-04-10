@@ -15,6 +15,8 @@ import './home.css'
 const Home = (props) => {
 
     const [email, setEmail] = useState('');
+    const [statusMessage, setStatusMessage] = useState('');
+    const [statusColor, setStatusColor] = useState('');
 
     const validateEmail = (email) => {
       const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -23,7 +25,12 @@ const Home = (props) => {
     const handleClick = () => {
 
       if (!validateEmail(email)) {
+        setStatusMessage('Niepoprawny e-mail. Spróbuj ponownie!');
+        setStatusColor('red');
         setEmail('');
+        setTimeout(() => {
+          setStatusMessage('');
+          }, 8000);
         return;
       }
       fetch('/.netlify/functions/server', {
@@ -35,10 +42,20 @@ const Home = (props) => {
       })
       .then(response => response.json())
       .then(data => {
+        setStatusMessage('Gratulacje! Jesteś oficjalnie ze Smart.ie!');
+        setStatusColor('#4CC366');
         setEmail('');
+        setTimeout(() => {
+          setStatusMessage('');
+          }, 8000);
       })
       .catch(error => {
         console.error(error)
+        setStatusMessage('Problem z e-mailem. Spróbuj inny e-mail lub ponownie później!');
+        setStatusColor('red');
+        setTimeout(() => {
+          setStatusMessage('');
+          }, 8000);
       });
     };
 
@@ -583,6 +600,11 @@ const Home = (props) => {
                   <span className="home-text41">Dołącz już teraz!</span>
                 </div>
               </div>
+              {statusMessage && (
+                <div style={{ fontFamily: 'Montserrat', fontSize: '16px', color: statusColor, textAlign: 'center' }}>
+                  {statusMessage}
+                </div>
+              )}
             </main>
             <main className="home-subscribe">
               <h1 className="home-notice">
