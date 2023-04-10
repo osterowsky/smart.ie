@@ -1,22 +1,37 @@
 import React from 'react'
 
 import { Helmet } from 'react-helmet'
+import { Link } from 'react-router-dom'
 
 
 import './polityka.css'
+import '../logonav.css'
 
 
 const Polityka = (props) => {
     return (
-        <div class="home-container">
+        <div class="home-container-sub">
              <Helmet>
                 <title>Polityka Prywatności</title>
                 <meta property="og:title" content="Polityka Prywatności" />
             </Helmet>
+
+            <div className="navbar-logo-container" style={{paddingBottom: '10vh'}}>
+                    <Link to="/">
+                    <img
+                        id="logo"
+                        alt='pastedImage'
+                        src='/playground_assets/logo.png'
+                        className="navbar-logo-pasted-image"
+                    />
+                    </Link>
+                    <h2 className="home-heading09 section-heading " id="heading" style={{color: '#4CC366'}}>
+                        Polityka Prywatności
+                    </h2>
+                </div>
+
             <section className="polityka-section">
-                 <h2 className="home-heading09 section-heading" style={{paddingTop: '80px', paddingBottom: '80px', color: '#4CC366'}}>
-                    Polityka Prywatności
-                 </h2>
+                 
                  <h2 className="polityka-heading">§1 Definicje</h2>
                  <p className="polityka-description">
                     <ul>

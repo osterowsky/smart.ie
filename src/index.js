@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom'
 import './style.css'
 import Home from './views/home'
 import Polityka from './views/polityka'
+import WaitList from './views/waitlist'
 
 const App = () => {
   return (
@@ -12,6 +13,7 @@ const App = () => {
       <div>
         <Route component={Home} exact path="/" />
         <Route component={Polityka} exact path="/polityka-prywatnosci" />
+        <Route component={WaitList} exact path="/wait-lista" />
       </div>
     </Router>
     
