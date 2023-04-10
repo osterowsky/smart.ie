@@ -61,13 +61,12 @@ const WaitList = (props) => {
                 <section className="waitlist-section" style={{paddingTop: '15vh', alignItems: 'center', justifyContent: 'center', display: 'flex'}}>
                 
                     <div  className="waitlist-form">
-                        <p className="waitlist-form-header">Zostań powiadomiony w dzień premiery!</p>
                         <div className="waitlist-form-input">
                             <input 
                                 type="email" 
                                 id="email" 
                                 name="email" 
-                                placeholder="twoj-email@gmail.com"
+                                placeholder="twoj@gmail.com"
                                 autoComplete="off" 
                                 className="waitlist-text-input input"
                                 value={email}

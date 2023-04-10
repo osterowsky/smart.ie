@@ -91,7 +91,7 @@ const Home = (props) => {
               </div>
             </div>
             <div className="home-get-started button">
-              <span className="home-text">Rób wygodnie zakupy!</span>
+              <a href="/wait-lista"><span className="home-text">Rób wygodnie zakupy!</span></a>
             </div>
           </div>
         </section>
@@ -128,7 +128,7 @@ const Home = (props) => {
               </main>
             </main>
             <div className="home-get-started1 button">
-              <span className="home-text01">Zacznij oszczędzać już dziś!</span>
+            <a href="/wait-lista"><span className="home-text01">Zacznij oszczędzać już dziś!</span></a>
             </div>
           </div>
         </section>
@@ -160,7 +160,7 @@ const Home = (props) => {
               </div>
             </div>
             <div className="home-get-started2 button">
-              <span className="home-text02">Wypróbuj Smartie!</span>
+            <a href="/wait-lista"><span className="home-text02">Wypróbuj Smartie!</span></a>
             </div>
           </div>
         </section>
@@ -248,8 +248,7 @@ const Home = (props) => {
                 <div className="home-buy-details">
                   <div className="home-buy button">
                     <span className="home-text07">
-                      <span>Zacznij przygodę już teraz za darmo!</span>
-                      <br></br>
+                    <a href="/wait-lista"><span>Zacznij przygodę już teraz za darmo!</span></a>
                     </span>
                   </div>
                   <div className="home-features">
@@ -316,7 +315,7 @@ const Home = (props) => {
                 <div className="home-buy-details1">
                   <div className="home-buy1 button">
                     <span className="home-text10">
-                      <span>Zacznij przygodę z Premium!</span>
+                    <a href="/wait-lista"><span>Zacznij przygodę z Premium!</span></a>
                       <br></br>
                     </span>
                   </div>
@@ -433,7 +432,7 @@ const Home = (props) => {
                     src="/playground_assets/apple-200w.png"
                     className="home-icon"
                   />
-                  <span className="home-text13">Pobierz na IOS</span>
+                   <a href="/wait-lista"><span className="home-text13">Pobierz na IOS</span></a>
                 </div>
                 <div className="home-android button">
                   <img
@@ -441,7 +440,7 @@ const Home = (props) => {
                     src="/playground_assets/android-200h.png"
                     className="home-icon1"
                   />
-                  <span className="home-text14">Pobierz na Android</span>
+                   <a href="/wait-lista"><span className="home-text14">Pobierz na Android</span></a>
                 </div>
               </div>
             </header>
