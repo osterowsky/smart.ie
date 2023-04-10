@@ -76,7 +76,7 @@ const Polityka = (props) => {
                     </h2>
                 </div>
 
-            <section className="polityka-section">
+            <section className="polityka-section" style={{marginTop: '10vh'}}>
                  
                  <h2 className="polityka-heading">§1 Definicje</h2>
                  <p className="polityka-description">
