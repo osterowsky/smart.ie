@@ -524,7 +524,7 @@ const Home = (props) => {
                     />
                   </a>
                   <a
-                    href="https://www.instagram.com/smart.ie/"
+                    href="https://www.instagram.com/smart.ie_polska/"
                     target="_blank"
                     rel="noreferrer noopener"
                     className="home-link2"
